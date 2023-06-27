@@ -6,5 +6,7 @@ function createRandomNumber() {
     return parseInt(Math.random() * biggerValue +1);
 }
 
+console.log(secretNumber)
+
 document.getElementById('smaller-value').innerHTML = smallerValue;
 document.getElementById('bigger-value').innerHTML = biggerValue;

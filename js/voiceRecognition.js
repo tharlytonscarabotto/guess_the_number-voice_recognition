@@ -12,6 +12,7 @@ recognition.addEventListener('result', onSpeak)
 function onSpeak (e) {
     guess = e.results[0][0].transcript
     showGuess(guess)
+    verifyValidGuess(guess)
 }
 function showGuess (guess) {
     guessElement.innerHTML = `
@@ -20,3 +21,4 @@ function showGuess (guess) {
     `
 }
 
+recognition.addEventListener('end', () => recognition.start())
