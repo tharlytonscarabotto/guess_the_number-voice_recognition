@@ -15,6 +15,7 @@ function verifyValidGuess(guess) {
         document.body.innerHTML = `
         <h2>You did it!</h2>
         <h3>The secret number is ${secretNumber}</h3>
+        <button id="new-game" class="new-game">New game</button>
         `
     } else if (number > secretNumber) {
         guessElement.innerHTML += `<div>The secret number is smaller <i class="fa-sharp fa-solid fa-arrow-down"></i></div>`
@@ -30,3 +31,9 @@ function invalidGuess(number) {
 function guessIsBiggerOrSmaller(number) {
     return number > biggerValue || number < smallerValue
 }
+
+document.body.addEventListener('click', e => {
+    if (e.target.id == 'new-game') {
+        window.location.reload()
+    }
+})

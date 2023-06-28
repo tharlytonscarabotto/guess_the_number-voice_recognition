@@ -13,6 +13,7 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    align-items: center;
 }
 
 h1 {
@@ -28,15 +29,30 @@ h3 {
     margin-top: 20px;
 }
 
-.message {
-    font-size: 1.5em;
-    margin-top: 40px;
-}
-
 .box {
     border: solid 2px var(--primary-color);
     display: inline-block;
     padding: 10px;
     margin: 20px;
     font-size: 3em;
+}
+
+.message {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.new-game {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 50px;
+    color: va(--bg-color);
+    text-transform: uppercase;
+}
+
+.new-game:hover {
+    background-color: var(--primary-color);
+    cursor: pointer;
+    transition: 0.5ms;
 }
